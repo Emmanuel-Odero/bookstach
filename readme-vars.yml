@@ -51,7 +51,7 @@ custom_compose: |
         - APP_URL=
         - DB_HOST=bookstack_db
         - DB_USER=bookstack
-        - DB_PASS=<yourdbpass>
+        - DB_PASS=bookstackapp
         - DB_DATABASE=bookstackapp
       volumes:
         - /path/to/data:/config
@@ -66,11 +66,11 @@ custom_compose: |
       environment:
         - PUID=1000
         - PGID=1000
-        - MYSQL_ROOT_PASSWORD=<yourdbpass>
+        - MYSQL_ROOT_PASSWORD=bookstackapp
         - TZ=Europe/London
         - MYSQL_DATABASE=bookstackapp
         - MYSQL_USER=bookstack
-        - MYSQL_PASSWORD=<yourdbpass>
+        - MYSQL_PASSWORD=bookstackapp
       volumes:
         - /path/to/data:/config
       restart: unless-stopped
